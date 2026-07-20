@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夏季休業のお知らせ - 神戸リボン</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #6d6d6d;
+    --border: #e2e2e2;
+    --closed: #f4dede;
+    --closed-border: #c8161d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 48px;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    color: var(--ink);
+    background: #ffffff;
+    line-height: 1.9;
+  }
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin: 0 0 1.6em;
+    padding-bottom: 0.8em;
+    border-bottom: 2px solid var(--ink);
+  }
+  p.lead {
+    font-size: 15.5px;
+    margin: 0 0 2em;
+  }
+  .period-box {
+    margin: 0 0 2em;
+    padding: 20px 24px;
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--closed-border);
+    background: #fafafa;
+  }
+  .period-box .label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--closed-border);
+    margin-bottom: 0.5em;
+  }
+  .period-box .dates {
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .notes {
+    margin: 0 0 2.5em;
+    padding-left: 1.3em;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .notes li { margin-bottom: 0.4em; }
+
+  /* ===== calendar ===== */
+  .cal-title {
+    font-family: "Noto Serif JP", serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 1em;
+    letter-spacing: 0.08em;
+  }
+  table.cal {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 1em;
+  }
+  table.cal th {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  table.cal th.sun { color: #c8161d; }
+  table.cal th.sat { color: #1f6fb2; }
+  table.cal td {
+    height: 56px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    position: relative;
+  }
+  table.cal td.empty { background: #fbfbfb; border-color: #f0f0f0; }
+  table.cal td.closed {
+    background: var(--closed);
+    font-weight: 700;
+  }
+  table.cal td.closed .tag {
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--closed-border);
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+  }
+  table.cal td.open-note .tag {
+    display: block;
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+  }
+  .cal-legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-bottom: 2.6em;
+  }
+  .cal-legend .sw {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--border);
+    vertical-align: -1px;
+    margin-right: 5px;
+  }
+  .cal-legend .sw.closed { background: var(--closed); border-color: var(--closed-border); }
+
+  .closing {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 2.6em;
+  }
+
+  /* ===== LINE block ===== */
+  .line-block {
+    padding: 18px 22px;
+    background: #f0fbf4;
+    border: 2px solid #06C755;
+    border-radius: 8px;
+    text-align: left;
+    line-height: 1.7;
+  }
+  .line-block p { margin: 0 0 0.9em; font-size: 14.5px; }
+  .line-block .btn-wrap { text-align: center; }
+  .line-block a {
+    display: inline-block;
+    padding: 13px 34px;
+    background-color: #06C755;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>夏季休業のお知らせ</h1>
+
+  <p class="lead">
+    誠に恐れ入りますが、弊社では下記の期間を夏季休業とさせていただきます。<br>
+    お客様にはご不便をおかけいたしますが、何卒ご理解賜りますようお願い申し上げます。
+  </p>
+
+  <div class="period-box">
+    <div class="label">■ 夏季休業期間</div>
+    <div class="dates">2026年8月11日（火）～8月16日（日）</div>
+  </div>
+
+  <ul class="notes">
+    <li>※8月10日（月）は通常通り営業いたします。</li>
+    <li>※8月17日（月）以降は平常通り営業いたします。</li>
+  </ul>
+
+  <div class="cal-title">2026年8月</div>
+  <table class="cal" aria-label="2026年8月 夏季休業カレンダー">
+    <thead>
+      <tr>
+        <th class="sun">日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="sat">土</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>1</td>
+      </tr>
+      <tr>
+        <td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td class="open-note">10<span class="tag">通常営業</span></td>
+        <td class="closed">11<span class="tag">休業</span></td>
+        <td class="closed">12<span class="tag">休業</span></td>
+        <td class="closed">13<span class="tag">休業</span></td>
+        <td class="closed">14<span class="tag">休業</span></td>
+        <td class="closed">15<span class="tag">休業</span></td>
+      </tr>
+      <tr>
+        <td class="closed">16<span class="tag">休業</span></td>
+        <td class="open-note">17<span class="tag">平常営業</span></td>
+        <td>18</td><td>19</td><td>20</td><td>21</td><td>22</td>
+      </tr>
+      <tr>
+        <td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+      </tr>
+      <tr>
+        <td>30</td><td>31</td>
+        <td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="cal-legend">
+    <span><span class="sw closed"></span>休業日</span>
+  </div>
+
+  <p class="closing">
+    ご不便をおかけいたしますが、何卒よろしくお願い申し上げます。
+  </p>
+
+  <div class="line-block">
+    <p><strong>📱 お問い合わせは神戸リボン LINE公式アカウントへ</strong><br>
+    休業期間中のお問い合わせにつきましては、営業再開後に順次ご対応させていただきます。</p>
+    <div class="btn-wrap">
+      <a href="https://lin.ee/v4E9XHO" target="_blank" rel="noopener">LINE公式アカウントを友だち追加</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// 親ページ（Weebly）にiframeの高さを通知して自動リサイズしてもらう
+(function() {
+  function postHeight() {
+    var h = document.documentElement.scrollHeight;
+    if (window.parent) {
+      window.parent.postMessage({ type: 'kobe-ribbon-iframe-height', height: h }, '*');
+    }
+  }
+  window.addEventListener('load', postHeight);
+  window.addEventListener('resize', postHeight);
+  setTimeout(postHeight, 500);
+  setTimeout(postHeight, 1500);
+})();
+</script>
+</body>
+</html>
