@@ -130,8 +130,7 @@
     border: 1px solid var(--border);
     background: #fff;
   }
-  .cal-legend .sw.closed { background: var(--pink); border-color: var(--pink); }
-  .cal-legend .sw.note { background: #eaf7f1; border-color: #c8ead9; }
+  .cal-legend .sw.closed,
   .cal-legend .sw.regular { background: #fff; border-color: var(--closed-border); }
 
   table.cal {
@@ -184,28 +183,12 @@
     letter-spacing: 0.03em;
     line-height: 1.5;
     white-space: nowrap;
-  }
-  table.cal td .badge.note {
-    background: #eaf7f1;
-    color: #1a8567;
-    border: 1px solid #c8ead9;
-  }
-  table.cal td .badge.regular {
-    background: #fff;
+    background: none;
     color: var(--closed-border);
-    border: 1px solid #f0c2c7;
+    border: 1px solid var(--closed-border);
   }
   table.cal td.empty { background: #fbfbfb; border-color: #f2f2f2; }
   table.cal td.empty .day { color: #cfd3d0; font-weight: 600; }
-  table.cal td.closed { background: var(--pink); }
-  table.cal td.closed .day { color: #fff; }
-  table.cal td.closed .badge {
-    background: rgba(255,255,255,0.22);
-    color: #fff;
-    border: 1px solid rgba(255,255,255,0.4);
-  }
-  table.cal td.closed.is-sun .day,
-  table.cal td.closed.is-sat .day { color: #fff; }
 
   @media (max-width: 480px) {
     table.cal td { height: 64px; padding: 6px 6px; }
@@ -259,8 +242,7 @@
   </div>
 
   <ul class="notes">
-    <li>※8月10日（月）は通常通り営業いたします。</li>
-    <li>※8月17日（月）以降は平常通り営業いたします。</li>
+    <li>8月10日と17日は通常通り営業いたします。</li>
   </ul>
 
   <div class="cal-card">
@@ -271,8 +253,7 @@
       <span class="year">2026</span>
     </div>
     <div class="cal-legend">
-      <span class="lg"><span class="sw closed"></span>休業日</span>
-      <span class="lg"><span class="sw note"></span>通常営業</span>
+      <span class="lg"><span class="sw closed"></span>夏季休業日</span>
       <span class="lg"><span class="sw regular"></span>定休日</span>
     </div>
     <table class="cal" aria-label="2026年8月 夏季休業カレンダー">
@@ -287,43 +268,43 @@
           <td class="is-sat"><span class="day">1</span></td>
         </tr>
         <tr>
-          <td class="is-sun"><span class="day">2</span><span class="badge regular">定休日</span></td>
+          <td class="is-sun"><span class="day">2</span><span class="badge">定休日</span></td>
           <td><span class="day">3</span></td>
           <td><span class="day">4</span></td>
           <td><span class="day">5</span></td>
-          <td><span class="day">6</span><span class="badge regular">定休日</span></td>
+          <td><span class="day">6</span><span class="badge">定休日</span></td>
           <td><span class="day">7</span></td>
           <td class="is-sat"><span class="day">8</span></td>
         </tr>
         <tr>
-          <td class="is-sun"><span class="day">9</span><span class="badge regular">定休日</span></td>
-          <td><span class="day">10</span><span class="badge note">通常営業</span></td>
-          <td class="closed"><span class="day">11</span><span class="badge">休業</span></td>
-          <td class="closed"><span class="day">12</span><span class="badge">休業</span></td>
-          <td class="closed"><span class="day">13</span><span class="badge">休業</span></td>
-          <td class="closed"><span class="day">14</span><span class="badge">休業</span></td>
-          <td class="closed is-sat"><span class="day">15</span><span class="badge">休業</span></td>
+          <td class="is-sun"><span class="day">9</span><span class="badge">定休日</span></td>
+          <td><span class="day">10</span></td>
+          <td><span class="day">11</span><span class="badge">夏季休業日</span></td>
+          <td><span class="day">12</span><span class="badge">夏季休業日</span></td>
+          <td><span class="day">13</span><span class="badge">夏季休業日</span></td>
+          <td><span class="day">14</span><span class="badge">夏季休業日</span></td>
+          <td class="is-sat"><span class="day">15</span><span class="badge">夏季休業日</span></td>
         </tr>
         <tr>
-          <td class="closed is-sun"><span class="day">16</span><span class="badge">休業</span></td>
-          <td><span class="day">17</span><span class="badge note">平常営業</span></td>
+          <td class="is-sun"><span class="day">16</span><span class="badge">夏季休業日</span></td>
+          <td><span class="day">17</span></td>
           <td><span class="day">18</span></td>
           <td><span class="day">19</span></td>
-          <td><span class="day">20</span><span class="badge regular">定休日</span></td>
+          <td><span class="day">20</span><span class="badge">定休日</span></td>
           <td><span class="day">21</span></td>
           <td class="is-sat"><span class="day">22</span></td>
         </tr>
         <tr>
-          <td class="is-sun"><span class="day">23</span><span class="badge regular">定休日</span></td>
+          <td class="is-sun"><span class="day">23</span><span class="badge">定休日</span></td>
           <td><span class="day">24</span></td>
           <td><span class="day">25</span></td>
           <td><span class="day">26</span></td>
-          <td><span class="day">27</span><span class="badge regular">定休日</span></td>
+          <td><span class="day">27</span><span class="badge">定休日</span></td>
           <td><span class="day">28</span></td>
           <td class="is-sat"><span class="day">29</span></td>
         </tr>
         <tr>
-          <td class="is-sun"><span class="day">30</span><span class="badge regular">定休日</span></td>
+          <td class="is-sun"><span class="day">30</span><span class="badge">定休日</span></td>
           <td><span class="day">31</span></td>
           <td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td>
         </tr>
