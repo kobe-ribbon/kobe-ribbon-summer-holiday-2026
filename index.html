@@ -121,6 +121,27 @@
     letter-spacing: 0.05em;
     margin-top: 2px;
   }
+  tr.cal-span-row td {
+    height: auto;
+    border: none;
+    padding: 4px 0 10px;
+  }
+  .cal-span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--closed-border);
+    font-weight: 700;
+    font-size: 11.5px;
+    letter-spacing: 0.04em;
+  }
+  .cal-span .line {
+    flex: 1 1 auto;
+    border-top: 1.5px solid var(--closed-border);
+  }
+  .cal-span .arrow { flex: 0 0 auto; }
+  .cal-span .label { flex: 0 0 auto; white-space: nowrap; }
   .cal-legend {
     display: flex;
     justify-content: center;
@@ -139,7 +160,7 @@
   }
   .cal-legend .sw.closed { background: var(--closed); border-color: var(--closed-border); }
   .cal-legend .sw.regular { background: #ffffff; border-color: var(--closed-border); }
-  table.cal td.regular-closed { color: var(--closed-border); }
+  table.cal td.regular-closed { color: var(--ink); }
   table.cal td.regular-closed .tag {
     display: block;
     font-size: 9px;
@@ -220,6 +241,18 @@
         <td class="closed">13<span class="tag">休業</span></td>
         <td class="closed">14<span class="tag">休業</span></td>
         <td class="closed">15<span class="tag">休業</span></td>
+      </tr>
+      <tr class="cal-span-row">
+        <td colspan="2"></td>
+        <td colspan="5">
+          <div class="cal-span">
+            <span class="arrow">←</span>
+            <span class="line"></span>
+            <span class="label">夏季休業日</span>
+            <span class="line"></span>
+            <span class="arrow">→</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td class="closed">16<span class="tag">休業</span></td>
