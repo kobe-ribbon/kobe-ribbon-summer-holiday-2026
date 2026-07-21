@@ -113,26 +113,6 @@
     color: var(--muted);
     letter-spacing: 0.08em;
   }
-  .cal-legend {
-    display: flex;
-    justify-content: center;
-    gap: 22px;
-    font-size: 11.5px;
-    color: var(--muted);
-    margin-bottom: 18px;
-  }
-  .cal-legend .lg { display: inline-flex; align-items: center; gap: 6px; }
-  .cal-legend .sw {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 3px;
-    border: 1px solid var(--border);
-    background: #fff;
-  }
-  .cal-legend .sw.closed,
-  .cal-legend .sw.regular { background: #fff; border-color: var(--closed-border); }
-
   table.cal {
     width: 100%;
     border-collapse: collapse;
@@ -252,10 +232,6 @@
       <span class="suffix">月</span>
       <span class="year">2026</span>
     </div>
-    <div class="cal-legend">
-      <span class="lg"><span class="sw closed"></span>夏季休業日</span>
-      <span class="lg"><span class="sw regular"></span>定休日</span>
-    </div>
     <table class="cal" aria-label="2026年8月 夏季休業カレンダー">
       <thead>
         <tr>
@@ -279,14 +255,14 @@
         <tr>
           <td class="is-sun"><span class="day">9</span><span class="badge">定休日</span></td>
           <td><span class="day">10</span></td>
-          <td><span class="day">11</span><span class="badge">夏季休業日</span></td>
-          <td><span class="day">12</span><span class="badge">夏季休業日</span></td>
-          <td><span class="day">13</span><span class="badge">夏季休業日</span></td>
-          <td><span class="day">14</span><span class="badge">夏季休業日</span></td>
-          <td class="is-sat"><span class="day">15</span><span class="badge">夏季休業日</span></td>
+          <td><span class="day">11</span><span class="badge">休業日</span></td>
+          <td><span class="day">12</span><span class="badge">休業日</span></td>
+          <td><span class="day">13</span><span class="badge">休業日</span></td>
+          <td><span class="day">14</span><span class="badge">休業日</span></td>
+          <td class="is-sat"><span class="day">15</span><span class="badge">休業日</span></td>
         </tr>
         <tr>
-          <td class="is-sun"><span class="day">16</span><span class="badge">夏季休業日</span></td>
+          <td class="is-sun"><span class="day">16</span><span class="badge">休業日</span></td>
           <td><span class="day">17</span></td>
           <td><span class="day">18</span></td>
           <td><span class="day">19</span></td>
